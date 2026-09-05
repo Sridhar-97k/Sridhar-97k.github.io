@@ -1,3 +1,39 @@
+/* Single source of truth for the site palette.
+   Change these values to re-theme the whole site. */
+:root {
+  /* Accent */
+  --accent-start: #6366f1;
+  --accent-end: #a855f7;
+  --accent-solid: #7c3aed;
+  --accent-gradient: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+  --accent-tint: rgba(99, 102, 241, 0.08);
+  --accent-tint-hover: rgba(99, 102, 241, 0.15);
+  --accent-border: rgba(99, 102, 241, 0.2);
+  --accent-shadow: rgba(99, 102, 241, 0.15);
+  --accent-shadow-strong: rgba(99, 102, 241, 0.3);
+
+  /* Surfaces */
+  --page-bg: linear-gradient(135deg, #eef2ff 0%, #faf5ff 100%);
+  --surface: #ffffff;
+  --surface-muted: #f9fafb;
+  --chip-bg: #f3f4f6;
+  --border: #e5e7eb;
+
+  /* Text */
+  --heading: #1e1b4b;
+  --text: #4b5563;
+  --text-muted: #6b7280;
+  --text-subtle: #9ca3af;
+
+  /* Status */
+  --status-ok-bg: #ecfdf5;
+  --status-ok-fg: #047857;
+  --status-ok-border: rgba(5, 150, 105, 0.19);
+  --status-pending-bg: #fffbeb;
+  --status-pending-fg: #b45309;
+  --status-pending-border: rgba(217, 119, 6, 0.19);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

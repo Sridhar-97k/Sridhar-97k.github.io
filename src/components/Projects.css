@@ -6,7 +6,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #1f2937;
+  color: var(--heading);
   position: relative;
   padding-bottom: 0.75rem;
 }
@@ -18,7 +18,7 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  background: var(--accent-gradient);
   border-radius: 2px;
 }
 
@@ -31,29 +31,40 @@
 
 .project-card {
   padding: 2rem;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
+  background: var(--surface);
+  border: 2px solid var(--border);
   border-radius: 16px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeInUp 0.6s ease-out backwards;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  border-color: #3b82f6;
+  border-color: var(--accent-start);
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 16px 32px var(--accent-shadow);
 }
 
 .project-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+}
+
+.project-card .project-context {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent-solid);
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #6b7280;
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
@@ -62,21 +73,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .tag {
   padding: 0.4rem 0.9rem;
-  background: linear-gradient(135deg, #3b82f615 0%, #06b6d415 100%);
-  color: #0891b2;
+  background: var(--accent-tint);
+  color: var(--accent-solid);
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid #3b82f630;
+  border: 1px solid var(--accent-border);
   transition: all 0.2s ease;
 }
 
 .tag:hover {
-  background: linear-gradient(135deg, #3b82f625 0%, #06b6d425 100%);
+  background: var(--accent-tint-hover);
   transform: scale(1.05);
 }
 

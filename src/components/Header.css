@@ -20,7 +20,7 @@
 .name {
   font-size: 3.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -30,8 +30,15 @@
 
 .tagline {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--text-muted);
   font-weight: 400;
+}
+
+.header-location {
+  font-size: 1rem;
+  color: var(--text-subtle);
+  font-weight: 500;
+  margin-top: 0.4rem;
 }
 
 .header-photo {
@@ -45,9 +52,9 @@
   object-fit: cover;
   border: 5px solid transparent;
   background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%) border-box;
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--accent-gradient) border-box;
+  box-shadow: 0 8px 24px var(--accent-shadow);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -55,7 +62,7 @@
 
 .profile-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 12px 32px var(--accent-shadow-strong);
 }
 
 @keyframes fadeInDown {

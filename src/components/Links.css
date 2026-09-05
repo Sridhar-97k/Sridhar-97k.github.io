@@ -6,7 +6,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #1f2937;
+  color: var(--heading);
   position: relative;
   padding-bottom: 0.75rem;
 }
@@ -18,7 +18,7 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  background: var(--accent-gradient);
   border-radius: 2px;
 }
 
@@ -34,11 +34,11 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: #f9fafb;
-  border: 2px solid #e5e7eb;
+  background: var(--surface-muted);
+  border: 2px solid var(--border);
   border-radius: 16px;
   text-decoration: none;
-  color: #1f2937;
+  color: var(--heading);
   font-weight: 600;
   font-size: 1.05rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -46,10 +46,10 @@
 }
 
 .link-card:hover {
-  border-color: #3b82f6;
+  border-color: var(--accent-start);
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.2);
-  background: linear-gradient(135deg, #3b82f615 0%, #06b6d415 100%);
+  box-shadow: 0 12px 24px var(--accent-shadow);
+  background: var(--accent-tint);
 }
 
 .link-card .icon {
