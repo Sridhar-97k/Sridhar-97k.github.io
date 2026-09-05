@@ -1,0 +1,138 @@
+.education {
+  margin-bottom: 4rem;
+}
+
+.education h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.education h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+.education-list {
+  margin-top: 2rem;
+}
+
+.education-card {
+  padding: 1.75rem 2rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.education-card:last-child {
+  margin-bottom: 0;
+}
+
+.education-card:hover {
+  border-color: var(--accent-start);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px var(--accent-shadow);
+}
+
+.education-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.education-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.4rem;
+}
+
+.school-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.school {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-solid);
+}
+
+.school-location {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.coursework {
+  margin-top: 1.25rem;
+}
+
+.coursework-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+  margin-bottom: 0.6rem;
+}
+
+.coursework-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.coursework-tag {
+  padding: 0.4rem 0.9rem;
+  background: var(--accent-tint);
+  color: var(--accent-solid);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--accent-border);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 1.5rem;
+  }
+
+  .education-head {
+    flex-direction: column;
+  }
+
+  .education-card .period {
+    align-self: flex-start;
+  }
+
+  .education-card:hover {
+    transform: translateY(-2px);
+  }
+}
