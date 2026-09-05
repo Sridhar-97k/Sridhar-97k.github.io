@@ -64,7 +64,7 @@ entry means adding an object — no JSX changes needed.
 | `src/components/Education.js` | Degrees, with optional `coursework` |
 | `src/components/Experience.js` | Roles, with optional `subtitle` and `highlights` |
 | `src/components/Skills.js` | Skill categories |
-| `src/components/Projects.js` | Projects, with optional `context` and `tags` |
+| `src/components/Projects.js` | Projects, with optional `context`, `tags` and `links` |
 | `src/components/Publications.js` | Citations |
 | `src/components/Links.js` | Social links and their inline SVG icons |
 
@@ -77,9 +77,17 @@ Optional fields can be omitted entirely and the markup for them is skipped.
   title: 'New Project',
   context: 'Where it was built',   // optional
   description: 'What it does and how.',
-  tags: ['React', 'Node']
+  tags: ['React', 'Node'],
+  links: [                          // optional; omit for projects with nothing to link
+    { type: 'demo', url: 'https://example.com' },
+    { type: 'github', url: 'https://github.com/you/repo' }
+  ]
 }
 ```
+
+`type` picks the icon and label: `demo` renders "Live demo", `github` renders "Source".
+Add a `label` to override the default text. Links open in a new tab with
+`rel="noopener noreferrer"`.
 
 ### Adding a publication
 

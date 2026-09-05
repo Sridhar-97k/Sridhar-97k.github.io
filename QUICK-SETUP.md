@@ -57,17 +57,24 @@ gradient stops in `public/favicon.svg`.
 
 ## Add a project
 
-In `src/components/Projects.js`, add to the `projects` array. `context` and `tags` are
-optional:
+In `src/components/Projects.js`, add to the `projects` array. `context`, `tags` and `links`
+are optional:
 
 ```javascript
 {
   title: 'New Project',
   context: 'Hackathon or course name',
   description: 'What it does and how you built it.',
-  tags: ['React', 'Node']
+  tags: ['React', 'Node'],
+  links: [
+    { type: 'demo', url: 'https://example.com' },
+    { type: 'github', url: 'https://github.com/you/repo' }
+  ]
 }
 ```
+
+`type: 'demo'` renders a "Live demo" button, `type: 'github'` renders "Source". Pass a
+`label` to override the text. Projects with no `links` simply show no button row.
 
 ## Add a publication
 
