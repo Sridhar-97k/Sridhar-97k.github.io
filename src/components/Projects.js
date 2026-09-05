@@ -39,7 +39,8 @@ const Projects = () => {
       context: 'Distributed Operating System Principles',
       description:
         'Reddit-style social platform built on the Erlang/BEAM VM using the Actor Model, with a central engine actor owning all state and independent client actors communicating solely through OTP message passing — no shared mutable state or locks. Implements subreddits, hierarchical comments, voting and karma, feed generation, and direct messaging across 20+ typed message handlers. Exposed through an 11-endpoint REST API with an interactive CLI client, plus a Zipf-distributed client simulator that sustained 2,700+ ops/sec at 1,000 simulated users (P95 latency ~216 µs). Adds RSA-2048/SHA-256 post signing with tamper and wrong-key detection; validated by a 10-test suite across ~6,500 lines and 19 modules.',
-      tags: ['Gleam', 'Erlang/BEAM', 'Actor Model', 'OTP', 'REST API', 'RSA-2048']
+      tags: ['Gleam', 'Erlang/BEAM', 'Actor Model', 'OTP', 'REST API', 'RSA-2048'],
+      links: [{ type: 'github', url: 'https://github.com/Sridhar-97k/reddit_clone' }]
     },
     {
       title: 'Pothole Detection and Maintenance System',
